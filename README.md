@@ -1,2 +1,2 @@
 # Algorithm_Scripting
-C
+My Repository for Free Code Camp Algorithm Scripting challenges solved
