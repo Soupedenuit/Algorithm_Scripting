@@ -1,3 +1,3 @@
 # Algorithm_Scripting
-My Repository for Free Code Camp Algorithm Scripting challenges solved
+My Repository for solved Free Code Camp Algorithm Scripting challenges
 
