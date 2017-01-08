@@ -36,6 +36,11 @@ function lookUpProfile(firstName, prop){
       }
       else return "No such property";
     }
+    
+    else if (contacts[i].firstName !== firstName) {
+      return "No such contact";
+  }
+    
   
   }
 
