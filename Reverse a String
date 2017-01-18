@@ -1,0 +1,12 @@
+function reverseString(str) {
+  var extract = [];
+  var backwards = [];
+  var rebuilt = [];
+  extract = str.split("");
+  backwards = extract.reverse();
+  rebuilt = backwards.join("");
+  
+  return rebuilt;
+}
+
+reverseString("revemohW ynoT");
