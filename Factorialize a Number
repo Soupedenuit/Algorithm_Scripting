@@ -1,0 +1,15 @@
+<script>
+
+function factorialize(num) {
+  var factorIt = 1;
+  for (var i = 1; i <= num; i++) { 
+    factorIt *= i;
+  }
+    
+  return factorIt;
+}
+
+</script>
+
+test:
+factorialize(20);
