@@ -1,0 +1,20 @@
+function palindrome(str) {
+  // Good luck!
+  var strLettersOnly = [];
+      strLettersOnly = str.toLowerCase().match(/[A-Za-z0-9]/gi).join("");
+  var strBackwardsLettersOnly = [];
+      strBackwardsLettersOnly = str.toLowerCase().match(/[A-Za-z0-9]/gi).reverse().join("");
+  if (strLettersOnly == strBackwardsLettersOnly) {
+    return true;
+   
+}
+
+  else 
+    return false;
+  
+
+}
+
+
+
+palindrome("not a palindrome");
