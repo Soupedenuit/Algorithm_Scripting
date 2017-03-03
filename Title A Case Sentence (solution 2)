@@ -1,0 +1,12 @@
+function titleCase(str) {
+  var strArr = str.toLowerCase().split(" ");
+  var strWords = "";
+  for ( var i = 0; i < strArr.length; i++ ) {
+    var strWords2 = strArr.slice(i, i + 1).toString();
+    var strWords3 = strWords2.replace(strWords2[0], strWords2[0].toUpperCase());
+    strWords += strWords3 + " ";
+  }
+  return strWords.trim();
+}
+
+titleCase("I'm a litTle tea pot");
