@@ -12,9 +12,7 @@ function palindrome(str) {
   else 
     return false;
   
-
 }
-
 
 
 palindrome("not a palindrome");
