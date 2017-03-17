@@ -6,7 +6,9 @@ function titleCase(str) {
     var strWords3 = strWords2.replace(strWords2[0], strWords2[0].toUpperCase());
     strWords += strWords3 + " ";
   }
-  return strWords.trim();
+
+return strWords.trim();
+
 }
 
 titleCase("I'm a litTle tea pot");
