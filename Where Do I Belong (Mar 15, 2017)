@@ -1,0 +1,14 @@
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+  
+  // Push num onto arr:
+  arr.push(num);
+  function compareNumbers(a, b) {
+  return a - b;
+  }
+  arr.sort(compareNumbers);
+  var findIndexOfNum = arr.indexOf(num);
+    return findIndexOfNum;
+}
+
+getIndexToIns([40, 60], 50);
