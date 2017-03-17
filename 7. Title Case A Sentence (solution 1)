@@ -1,10 +1,12 @@
 function titleCase(str) {
-var x = function repl(str) {
-return str.toUpperCase();
+  var x = function repl(str) {
+  return str.toUpperCase();
 };
+
 var y = str.toLowerCase();
 var z = y.replace(/(\s\w)|^./g, x);
 return z;
+
 }
 
 titleCase("I'm a little tea pot");
