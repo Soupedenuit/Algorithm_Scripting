@@ -1,0 +1,38 @@
+function rot13(str) {
+  
+  // Build arr1 - array of character codes of str
+  
+  var arr1 = [];
+  for ( var i = 0; i < str.length; i++ ) {
+    arr1.push(str.charCodeAt(i));
+  }
+  
+  // Build arr2 - array of new character codes of str (ROT13)
+  
+  var arr2 = [];
+  for ( var j = 0; j < str.length; j++ ) {
+    if ( arr1[j] >= 65 && arr1[j] <= 77 ) {
+      arr2.push(arr1[j]+13);
+    }
+    else if ( arr1[j] >= 78 && arr1[j] <= 90 ) {
+      arr2.push(arr1[j]-13);
+    }
+    else arr2.push(arr1[j]);
+  }
+  
+  // Build str2 - string made from the new character codes above
+  
+  var str2 = "";
+  for ( var k = 0; k < str.length; k++ ) {
+    var x = String.fromCharCode(arr2[k]);
+    str2 = str2.concat(x);
+  }
+  
+  return str2;
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
+rot13("GB OR BE ABG GB OR, GUNG VF GUR DHRFGVBA");
+rot13("TO BE OR NOT TO BE, THAT IS THE QUESTION");
+rot13("SERR CVMMN!");
