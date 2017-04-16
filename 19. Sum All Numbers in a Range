@@ -1,0 +1,12 @@
+function sumAll(arr) {
+  var min = Math.min.apply(null, arr);
+  var max = Math.max.apply(null, arr);
+  var all = [];
+  for ( min; min <= max; min++ ) {
+    all.push(min);
+  }
+  
+  return all.reduce((a,b) => a + b);
+}
+
+sumAll([1, 100]);
