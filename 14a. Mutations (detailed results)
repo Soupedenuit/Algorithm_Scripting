@@ -1,0 +1,40 @@
+function mutation(arr) {
+  /* Iterate through 2nd string one character at a time to see if  each character is present in the 1st string */
+  var z = [];
+  for ( var i = 0; i < arr[1].length; i++ ) {
+    z.push(0); //create an array of zeros of length of 2nd string 
+    for ( var j = 0; j < arr[0].length; j++ ) {
+      var x = arr[0][j];
+      var y = new RegExp(x, 'i');  //create RegExp to ignore Case
+        if (arr[1][i].match(y)) {
+          z[i]++;
+      }
+    }
+  }
+  var checkForZero = function(isZero) {
+    return isZero === 0;
+  };
+  
+  for ( let k = 0; k < z.length; k++ ) {
+    if ( z[k] === 0 ) {
+      console.log("At index " + k + ".  Oops, letter " + arr[1][k] + " is not present.");
+    }
+    else if ( z[k] === 1 ) {
+      console.log("At index " + k + ".  Ok, letter " + arr[1][k] + " is present once.");
+    }
+    else if ( z[k] === 2 ) {
+      console.log("At index " + k + ".  Ok, letter " + arr[1][k] + " is present twice.");
+    }
+    else
+      console.log("At index " + k + ".  Ok, letter " + arr[1][k] + " is present " + z[k] + " times!");
+  }
+
+if (z.find(checkForZero) === 0) { 
+  return false + ". Here is an array representing how many times each letter is present: [" + z + "]";
+}
+else return true + ". Here is an array representing how many times each letter is present: [" + z + "]";
+
+}
+//mutation(["hello", "hey"]);
+//mutation(["vssssooooondoo", "no"]);
+mutation(["zyxwvutttttsrrqponmlkjihgfedcba", "qrstuvwxyz"]);
