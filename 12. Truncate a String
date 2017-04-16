@@ -1,0 +1,24 @@
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  a = str.length;
+  var strSliced;
+  var strTruncated;
+  if (num <= 3) {
+    strSliced = str.slice(0, num);
+    strTruncated = strSliced + "...";
+  }
+  
+  else if (num < a) {
+    strSliced = str.slice(0, num - 3);
+    strTruncated = strSliced + "...";
+  }
+  
+  else if (num >= a) {
+    strTruncated = str;
+  }
+ 
+  return strTruncated;
+}
+
+truncateString("0123456789", 6);
+truncateString("A-tisket a-tasket A green and yellow basket", 11);
