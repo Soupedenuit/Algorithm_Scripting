@@ -1,0 +1,13 @@
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  var b = [];
+  var c = arr.length / size;
+  var d = Math.ceil(c);
+  for ( var i = 0; i < d; i++ ) {
+    var a = arr.slice(i * size, size + i * size);
+    b.push(a);
+  }
+  return b;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d", "e"], 2);
